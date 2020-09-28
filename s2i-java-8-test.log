@@ -1,0 +1,304 @@
+﻿STEP-GEN-ENV-FILE
+
+Generated Env file
+------------------------------
+MAVEN_CLEAR_REPO=false
+------------------------------
+
+STEP-GENERATE
+
+Application dockerfile generated in /gen-source/Dockerfile.gen
+
+STEP-BUILD
+
+STEP 1: FROM registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift
+Getting image source signatures
+Copying blob sha256:aab524fa26271e951d909cc641d5748ee393f8b097cce6ae2d3ef9e385eb0037
+Copying blob sha256:96d330a26895c15953dadd5a7cda8801a777e3b49a21bb0f1d5e3006042399d9
+Copying blob sha256:25f07378c750b25e33c2e34d53f05f1f14a320217c294f43ef7835b96db2d8ae
+Copying config sha256:46b0b4cf8a005b469bbc8c4550d409f6d09bd8d269890cb0b01e603fadf3b132
+Writing manifest to image destination
+Storing signatures
+STEP 2: LABEL "io.openshift.s2i.build.image"="registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift" "io.openshift.s2i.build.source-location"="./target/"
+1067d7354528942eb8a8a284c3ff2f029893878f3348999b2239dc102545240c
+STEP 3: ENV MAVEN_CLEAR_REPO="false"
+09f83eb8a5bbb5e60858132580ed55118f4b8f8e7c544daa3b31ed0cae9e6f81
+STEP 4: USER root
+384faa9771e3b33985453129ad5ae3be82c0f445406c8692edbc02fb400507b0
+STEP 5: COPY upload/src /tmp/src
+f785e70977eccdbbe6c26d9bb8206be5876071887156e64ac06c45eb18b24b38
+STEP 6: RUN chown -R 1001:0 /tmp/src
+a32195e4c0af767d1e17ce865d89a0f6036800beba741a04a497c5fdd321f3ac
+STEP 7: USER 1001
+a85e864b45d98e381f142665cd3b3914eef178cee9bf291039257e0c65b64dff
+STEP 8: RUN /usr/local/s2i/assemble
+INFO S2I source build with plain binaries detected
+INFO Copying binaries from /tmp/src to /deployments ...
+checkstyle-cachefile
+checkstyle-checker.xml
+checkstyle-result.xml
+checkstyle-suppressions.xml
+jacoco.exec
+spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar
+spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar.original
+.wro4j/
+.wro4j/buildContext.properties
+classes/
+classes/application-mysql.properties
+classes/application.properties
+classes/banner.txt
+classes/git.properties
+classes/META-INF/
+classes/META-INF/build-info.properties
+classes/db/
+classes/db/h2/
+classes/db/h2/data.sql
+classes/db/h2/schema.sql
+classes/db/hsqldb/
+classes/db/hsqldb/data.sql
+classes/db/hsqldb/schema.sql
+classes/db/mysql/
+classes/db/mysql/data.sql
+classes/db/mysql/petclinic_db_setup_mysql.txt
+classes/db/mysql/schema.sql
+classes/db/mysql/user.sql
+classes/messages/
+classes/messages/messages.properties
+classes/messages/messages_de.properties
+classes/messages/messages_en.properties
+classes/messages/messages_es.properties
+classes/org/
+classes/org/springframework/
+classes/org/springframework/samples/
+classes/org/springframework/samples/petclinic/
+classes/org/springframework/samples/petclinic/PetClinicApplication.class
+classes/org/springframework/samples/petclinic/model/
+classes/org/springframework/samples/petclinic/model/BaseEntity.class
+classes/org/springframework/samples/petclinic/model/NamedEntity.class
+classes/org/springframework/samples/petclinic/model/Person.class
+classes/org/springframework/samples/petclinic/owner/
+classes/org/springframework/samples/petclinic/owner/Owner.class
+classes/org/springframework/samples/petclinic/owner/OwnerController.class
+classes/org/springframework/samples/petclinic/owner/OwnerRepository.class
+classes/org/springframework/samples/petclinic/owner/Pet.class
+classes/org/springframework/samples/petclinic/owner/PetController.class
+classes/org/springframework/samples/petclinic/owner/PetRepository.class
+classes/org/springframework/samples/petclinic/owner/PetType.class
+classes/org/springframework/samples/petclinic/owner/PetTypeFormatter.class
+classes/org/springframework/samples/petclinic/owner/PetValidator.class
+classes/org/springframework/samples/petclinic/owner/VisitController.class
+classes/org/springframework/samples/petclinic/system/
+classes/org/springframework/samples/petclinic/system/CacheConfiguration.class
+classes/org/springframework/samples/petclinic/system/CrashController.class
+classes/org/springframework/samples/petclinic/system/WelcomeController.class
+classes/org/springframework/samples/petclinic/vet/
+classes/org/springframework/samples/petclinic/vet/Specialty.class
+classes/org/springframework/samples/petclinic/vet/Vet.class
+classes/org/springframework/samples/petclinic/vet/VetController.class
+classes/org/springframework/samples/petclinic/vet/VetRepository.class
+classes/org/springframework/samples/petclinic/vet/Vets.class
+classes/org/springframework/samples/petclinic/visit/
+classes/org/springframework/samples/petclinic/visit/Visit.class
+classes/org/springframework/samples/petclinic/visit/VisitRepository.class
+classes/static/
+classes/static/resources/
+classes/static/resources/css/
+classes/static/resources/css/petclinic.css
+classes/static/resources/fonts/
+classes/static/resources/fonts/montserrat-webfont.eot
+classes/static/resources/fonts/montserrat-webfont.svg
+classes/static/resources/fonts/montserrat-webfont.ttf
+classes/static/resources/fonts/montserrat-webfont.woff
+classes/static/resources/fonts/varela_round-webfont.eot
+classes/static/resources/fonts/varela_round-webfont.svg
+classes/static/resources/fonts/varela_round-webfont.ttf
+classes/static/resources/fonts/varela_round-webfont.woff
+classes/static/resources/images/
+classes/static/resources/images/favicon.png
+classes/static/resources/images/pets.png
+classes/static/resources/images/platform-bg.png
+classes/static/resources/images/spring-logo-dataflow-mobile.png
+classes/static/resources/images/spring-logo-dataflow.png
+classes/static/resources/images/spring-pivotal-logo.png
+classes/templates/
+classes/templates/error.html
+classes/templates/welcome.html
+classes/templates/fragments/
+classes/templates/fragments/inputField.html
+classes/templates/fragments/layout.html
+classes/templates/fragments/selectField.html
+classes/templates/owners/
+classes/templates/owners/createOrUpdateOwnerForm.html
+classes/templates/owners/findOwners.html
+classes/templates/owners/ownerDetails.html
+classes/templates/owners/ownersList.html
+classes/templates/pets/
+classes/templates/pets/createOrUpdatePetForm.html
+classes/templates/pets/createOrUpdateVisitForm.html
+classes/templates/vets/
+classes/templates/vets/vetList.html
+generated-sources/
+generated-sources/annotations/
+generated-test-sources/
+generated-test-sources/test-annotations/
+maven-archiver/
+maven-archiver/pom.properties
+maven-status/
+maven-status/maven-compiler-plugin/
+maven-status/maven-compiler-plugin/compile/
+maven-status/maven-compiler-plugin/compile/default-compile/
+maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+maven-status/maven-compiler-plugin/testCompile/
+maven-status/maven-compiler-plugin/testCompile/default-testCompile/
+maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+site/
+site/jacoco/
+site/jacoco/index.html
+site/jacoco/jacoco-sessions.html
+site/jacoco/jacoco.csv
+site/jacoco/jacoco.xml
+site/jacoco/jacoco-resources/
+site/jacoco/jacoco-resources/branchfc.gif
+site/jacoco/jacoco-resources/branchnc.gif
+site/jacoco/jacoco-resources/branchpc.gif
+site/jacoco/jacoco-resources/bundle.gif
+site/jacoco/jacoco-resources/class.gif
+site/jacoco/jacoco-resources/down.gif
+site/jacoco/jacoco-resources/greenbar.gif
+site/jacoco/jacoco-resources/group.gif
+site/jacoco/jacoco-resources/method.gif
+site/jacoco/jacoco-resources/package.gif
+site/jacoco/jacoco-resources/prettify.css
+site/jacoco/jacoco-resources/prettify.js
+site/jacoco/jacoco-resources/redbar.gif
+site/jacoco/jacoco-resources/report.css
+site/jacoco/jacoco-resources/report.gif
+site/jacoco/jacoco-resources/session.gif
+site/jacoco/jacoco-resources/sort.gif
+site/jacoco/jacoco-resources/sort.js
+site/jacoco/jacoco-resources/source.gif
+site/jacoco/jacoco-resources/up.gif
+site/jacoco/org.springframework.samples.petclinic.model/
+site/jacoco/org.springframework.samples.petclinic.model/BaseEntity.html
+site/jacoco/org.springframework.samples.petclinic.model/BaseEntity.java.html
+site/jacoco/org.springframework.samples.petclinic.model/NamedEntity.html
+site/jacoco/org.springframework.samples.petclinic.model/NamedEntity.java.html
+site/jacoco/org.springframework.samples.petclinic.model/Person.html
+site/jacoco/org.springframework.samples.petclinic.model/Person.java.html
+site/jacoco/org.springframework.samples.petclinic.model/index.html
+site/jacoco/org.springframework.samples.petclinic.model/index.source.html
+site/jacoco/org.springframework.samples.petclinic.owner/
+site/jacoco/org.springframework.samples.petclinic.owner/Owner.html
+site/jacoco/org.springframework.samples.petclinic.owner/Owner.java.html
+site/jacoco/org.springframework.samples.petclinic.owner/OwnerController.html
+site/jacoco/org.springframework.samples.petclinic.owner/OwnerController.java.html
+site/jacoco/org.springframework.samples.petclinic.owner/Pet.html
+site/jacoco/org.springframework.samples.petclinic.owner/Pet.java.html
+site/jacoco/org.springframework.samples.petclinic.owner/PetController.html
+site/jacoco/org.springframework.samples.petclinic.owner/PetController.java.html
+site/jacoco/org.springframework.samples.petclinic.owner/PetType.html
+site/jacoco/org.springframework.samples.petclinic.owner/PetType.java.html
+site/jacoco/org.springframework.samples.petclinic.owner/PetTypeFormatter.html
+site/jacoco/org.springframework.samples.petclinic.owner/PetTypeFormatter.java.html
+site/jacoco/org.springframework.samples.petclinic.owner/PetValidator.html
+site/jacoco/org.springframework.samples.petclinic.owner/PetValidator.java.html
+site/jacoco/org.springframework.samples.petclinic.owner/VisitController.html
+site/jacoco/org.springframework.samples.petclinic.owner/VisitController.java.html
+site/jacoco/org.springframework.samples.petclinic.owner/index.html
+site/jacoco/org.springframework.samples.petclinic.owner/index.source.html
+site/jacoco/org.springframework.samples.petclinic.system/
+site/jacoco/org.springframework.samples.petclinic.system/CacheConfiguration.html
+site/jacoco/org.springframework.samples.petclinic.system/CacheConfiguration.java.html
+site/jacoco/org.springframework.samples.petclinic.system/CrashController.html
+site/jacoco/org.springframework.samples.petclinic.system/CrashController.java.html
+site/jacoco/org.springframework.samples.petclinic.system/WelcomeController.html
+site/jacoco/org.springframework.samples.petclinic.system/WelcomeController.java.html
+site/jacoco/org.springframework.samples.petclinic.system/index.html
+site/jacoco/org.springframework.samples.petclinic.system/index.source.html
+site/jacoco/org.springframework.samples.petclinic.vet/
+site/jacoco/org.springframework.samples.petclinic.vet/Specialty.html
+site/jacoco/org.springframework.samples.petclinic.vet/Specialty.java.html
+site/jacoco/org.springframework.samples.petclinic.vet/Vet.html
+site/jacoco/org.springframework.samples.petclinic.vet/Vet.java.html
+site/jacoco/org.springframework.samples.petclinic.vet/VetController.html
+site/jacoco/org.springframework.samples.petclinic.vet/VetController.java.html
+site/jacoco/org.springframework.samples.petclinic.vet/Vets.html
+site/jacoco/org.springframework.samples.petclinic.vet/Vets.java.html
+site/jacoco/org.springframework.samples.petclinic.vet/index.html
+site/jacoco/org.springframework.samples.petclinic.vet/index.source.html
+site/jacoco/org.springframework.samples.petclinic.visit/
+site/jacoco/org.springframework.samples.petclinic.visit/Visit.html
+site/jacoco/org.springframework.samples.petclinic.visit/Visit.java.html
+site/jacoco/org.springframework.samples.petclinic.visit/index.html
+site/jacoco/org.springframework.samples.petclinic.visit/index.source.html
+site/jacoco/org.springframework.samples.petclinic/
+site/jacoco/org.springframework.samples.petclinic/PetClinicApplication.html
+site/jacoco/org.springframework.samples.petclinic/PetClinicApplication.java.html
+site/jacoco/org.springframework.samples.petclinic/index.html
+site/jacoco/org.springframework.samples.petclinic/index.source.html
+surefire-reports/
+surefire-reports/TEST-org.springframework.samples.petclinic.PetclinicIntegrationTests.xml
+surefire-reports/TEST-org.springframework.samples.petclinic.model.ValidatorTests.xml
+surefire-reports/TEST-org.springframework.samples.petclinic.owner.OwnerControllerTests.xml
+surefire-reports/TEST-org.springframework.samples.petclinic.owner.PetControllerTests.xml
+surefire-reports/TEST-org.springframework.samples.petclinic.owner.PetTypeFormatterTests.xml
+surefire-reports/TEST-org.springframework.samples.petclinic.owner.VisitControllerTests.xml
+surefire-reports/TEST-org.springframework.samples.petclinic.service.ClinicServiceTests.xml
+surefire-reports/TEST-org.springframework.samples.petclinic.system.CrashControllerTests.xml
+surefire-reports/TEST-org.springframework.samples.petclinic.vet.VetControllerTests.xml
+surefire-reports/TEST-org.springframework.samples.petclinic.vet.VetTests.xml
+surefire-reports/org.springframework.samples.petclinic.PetclinicIntegrationTests.txt
+surefire-reports/org.springframework.samples.petclinic.model.ValidatorTests.txt
+surefire-reports/org.springframework.samples.petclinic.owner.OwnerControllerTests.txt
+surefire-reports/org.springframework.samples.petclinic.owner.PetControllerTests.txt
+surefire-reports/org.springframework.samples.petclinic.owner.PetTypeFormatterTests.txt
+surefire-reports/org.springframework.samples.petclinic.owner.VisitControllerTests.txt
+surefire-reports/org.springframework.samples.petclinic.service.ClinicServiceTests.txt
+surefire-reports/org.springframework.samples.petclinic.system.CrashControllerTests.txt
+surefire-reports/org.springframework.samples.petclinic.vet.VetControllerTests.txt
+surefire-reports/org.springframework.samples.petclinic.vet.VetTests.txt
+test-classes/
+test-classes/org/
+test-classes/org/springframework/
+test-classes/org/springframework/samples/
+test-classes/org/springframework/samples/petclinic/
+test-classes/org/springframework/samples/petclinic/PetclinicIntegrationTests.class
+test-classes/org/springframework/samples/petclinic/model/
+test-classes/org/springframework/samples/petclinic/model/ValidatorTests.class
+test-classes/org/springframework/samples/petclinic/owner/
+test-classes/org/springframework/samples/petclinic/owner/OwnerControllerTests$1.class
+test-classes/org/springframework/samples/petclinic/owner/OwnerControllerTests.class
+test-classes/org/springframework/samples/petclinic/owner/PetControllerTests.class
+test-classes/org/springframework/samples/petclinic/owner/PetTypeFormatterTests$1.class
+test-classes/org/springframework/samples/petclinic/owner/PetTypeFormatterTests$2.class
+test-classes/org/springframework/samples/petclinic/owner/PetTypeFormatterTests.class
+test-classes/org/springframework/samples/petclinic/owner/VisitControllerTests.class
+test-classes/org/springframework/samples/petclinic/service/
+test-classes/org/springframework/samples/petclinic/service/ClinicServiceTests.class
+test-classes/org/springframework/samples/petclinic/service/EntityUtils.class
+test-classes/org/springframework/samples/petclinic/system/
+test-classes/org/springframework/samples/petclinic/system/CrashControllerTests.class
+test-classes/org/springframework/samples/petclinic/vet/
+test-classes/org/springframework/samples/petclinic/vet/VetControllerTests.class
+test-classes/org/springframework/samples/petclinic/vet/VetTests.class
+2368e486bd364f0668d32d82fd8ea0c608c6b2d7dcea3c7ddb2bdc111b38e8ea
+STEP 9: CMD /usr/local/s2i/run
+STEP 10: COMMIT quay.io/vinamra2807/s2i-java:v1
+029f0b18502608c7a162aeba37e766c3a28eebecaba43b86de902e83495d4a4a
+
+STEP-PUSH
+
+Getting image source signatures
+Copying blob sha256:548d9305d034bf3372b997ad14f69bd608eea7112a6200daebf92ed91cb52dfc
+Copying blob sha256:0181b995f9e1e5269898929ee58a8db5d5c6460e7a594799efca754d2ece800a
+Copying blob sha256:6b063050746f013ed944e73a9e70df79edf598ce8ea240dd3083c0b83a13c421
+Copying blob sha256:ed72e467f3a0c675bb1933e9d93ab928d18f510ea515182d6112e586ff87b0bb
+Copying blob sha256:41870ccd0d9af0988f34cae316f0a061eed08e77a1123828185d192f5d41b871
+Copying blob sha256:d5409e07a0c879144c196c38ab9a7a3f59d8630882ad19d2d87e0aaa7af09c7f
+Copying config sha256:029f0b18502608c7a162aeba37e766c3a28eebecaba43b86de902e83495d4a4a
+Writing manifest to image destination
+Copying config sha256:029f0b18502608c7a162aeba37e766c3a28eebecaba43b86de902e83495d4a4a
+Writing manifest to image destination
+Storing signatures
