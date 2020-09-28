@@ -1,0 +1,64 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: s2i-test-pipeline
+spec:
+  workspaces:
+    - name: shared-workspace
+    - name: maven-settings
+  tasks:
+    - name: fetch-repository
+      taskRef:
+        name: git-clone
+      workspaces:
+        - name: output
+          workspace: shared-workspace
+      params:
+        - name: url
+          value: https://github.com/spring-projects/spring-petclinic
+        - name: revision
+          value: "main"
+        - name: subdirectory
+          value: ""
+        - name: deleteExisting
+          value: "true"
+    - name: maven-run
+      taskRef:
+        name: maven
+      runAfter:
+        - fetch-repository
+      workspaces:
+        - name: maven-settings
+          workspace: maven-settings
+        - name: source
+          workspace: shared-workspace
+    - name: s2i-java-8-test
+      taskRef:
+        name: s2i-java-8
+      runAfter:
+        - maven-run
+      workspaces:
+        - name: source
+          workspace: shared-workspace
+      params:
+        - name: TLSVERIFY
+          value: "false"
+        - name: IMAGE
+          value: "quay.io/diagrawa/s2i-java:v1"
+        - name: PATH_CONTEXT
+          value: "./target/"
+---
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: s2i-test-pipeline-run
+spec:
+  serviceAccountName: quay-login
+  pipelineRef:
+    name: s2i-test-pipeline
+  workspaces:
+    - name: maven-settings
+      emptyDir: {}
+    - name: shared-workspace
+      persistentvolumeclaim:
+        claimName: s2i-source-pvc

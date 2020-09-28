@@ -1,0 +1,10 @@
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: image
+spec:
+  type: image
+  params:
+    - name: url
+      value: quay.io/diagrawa/s2i-java:v1
